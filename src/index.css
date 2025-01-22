@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+nav a.active{
+    border: 1px solid #23BE0A;
+    border-radius: 6px;
+    color: #23BE0A;
+    font-weight: 700;
+}
+
+nav a.active:hover{
+    background-color: #23BE0A;
+    color: white;
+    font-weight: 700;
+}
