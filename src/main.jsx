@@ -7,7 +7,8 @@ import {
 } from "react-router-dom";
 import Root from './components/Root/Root';
 import ErrorPage from './components/Error Page/ErrorPage';
-import NavBar from './components/NavBar/NavBar';
+import ListedBooks from './components/ListedBooks/ListedBooks';
+import Banner from './components/Banner/Banner';
 
 const router = createBrowserRouter([
   {
@@ -15,7 +16,14 @@ const router = createBrowserRouter([
     element: <Root/>,
     errorElement: <ErrorPage/>,
     children: [
-    
+      {
+        path: '/listedbooks',
+        element:<ListedBooks/>
+      },
+      {
+        path: '/',
+        element: <Banner/>
+      }
     ]
   },
 ]);

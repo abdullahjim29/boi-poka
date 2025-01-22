@@ -7,6 +7,7 @@ nav a.active{
     border-radius: 6px;
     color: #23BE0A;
     font-weight: 700;
+    background-color: white;
 }
 
 nav a.active:hover{
