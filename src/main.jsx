@@ -8,7 +8,8 @@ import {
 import Root from './components/Root/Root';
 import ErrorPage from './components/Error Page/ErrorPage';
 import ListedBooks from './components/ListedBooks/ListedBooks';
-import Banner from './components/Banner/Banner';
+import Home from './components/Home/Home';
+
 
 const router = createBrowserRouter([
   {
@@ -17,13 +18,13 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage/>,
     children: [
       {
+        path: '/',
+        element: <Home/>
+      },
+      {
         path: '/listedbooks',
         element:<ListedBooks/>
       },
-      {
-        path: '/',
-        element: <Banner/>
-      }
     ]
   },
 ]);

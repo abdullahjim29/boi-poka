@@ -29,7 +29,7 @@ const NavBar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow space-y-3"
             >
             {
               menuLinks
@@ -45,8 +45,9 @@ const NavBar = () => {
             }
           </ul>
         </div>
-        <div className="navbar-end">
-          <a className="btn">Button</a>
+        <div className="navbar-end space-x-3">
+          <a className="btn bg-[#23BE0A] text-white">Sign In</a>
+          <a className="btn bg-[#4dbbde] text-white">Sign Up</a>
         </div>
       </div>
     </nav>

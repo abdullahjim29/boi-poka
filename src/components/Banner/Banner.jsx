@@ -1,9 +1,8 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 import image from '/books.png'
-
 const Banner = () => {
-  return (
-    <div className="hero bg-base-200 px-20 py-10 rounded-2xl my-6">
+    return (
+        <div className="hero bg-base-200 px-20 py-10 rounded-2xl my-6">
       <div className="hero-content flex-col lg:flex-row-reverse">
         <img
           src={image}
@@ -15,7 +14,7 @@ const Banner = () => {
         </div>
       </div>
     </div>
-  );
+    );
 };
 
 export default Banner;
