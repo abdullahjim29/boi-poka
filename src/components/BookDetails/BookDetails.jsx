@@ -1,4 +1,6 @@
 import { useLoaderData, useParams } from "react-router-dom";
+import { addToLocalStorage } from "../../BooksStored/BookStored";
+import { Toaster } from "react-hot-toast";
 
 const BookDetails = () => {
   const { bookId } = useParams();
@@ -8,6 +10,7 @@ const BookDetails = () => {
   const book = allBooks.find((book) => book.bookId === bookIdInt);
 
   const {
+    bookId: id,
     bookName,
     author,
     image,
@@ -20,8 +23,13 @@ const BookDetails = () => {
     yearOfPublishing,
   } = book;
 
+  const addToReadList = id => {
+    addToLocalStorage(id)
+  }
+
   return (
     <div className="my-10">
+        <Toaster/>
       <div className="grid grid-col lg:grid-cols-2 gap-10">
         <div className="bg-base-200 p-20 rounded-2xl flex justify-center items-center">
             <img className="h-[400px]" src={image} alt={bookName} />
@@ -56,7 +64,7 @@ const BookDetails = () => {
             <p>Rating:</p>
             <p className="font-bold">{rating}</p>
             </div>
-            <button className="btn font-bold text-black px-6 mr-6 bg-white border-black hover:bg-[#23BE0A] hover:text-white">Read</button>
+            <button onClick={() => addToReadList (id)} className="btn font-bold text-black px-6 mr-6 bg-white border-black hover:bg-[#23BE0A] hover:text-white">Read</button>
             <button className="btn font-bold px-6 bg-[#50B1C9] text-white hover:bg-[#23BE0A]">Wishlist</button>
         </div>
       </div>
